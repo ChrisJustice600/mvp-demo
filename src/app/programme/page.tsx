@@ -3,8 +3,9 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
+import { Loader2 } from 'lucide-react'
 
 // Types
 interface Program {
@@ -253,4 +254,20 @@ const SearchPrograms = () => {
   );
 };
 
-export default SearchPrograms;
+// Composant de chargement simple avec Loader2
+const LoadingSpinner = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <Loader2 className="h-6 w-6 animate-spin" />
+    </div>
+  )
+}
+
+// Votre page
+export default function ProgrammePage() {
+  return (
+    <Suspense fallback={<LoadingSpinner />}>
+      <SearchPrograms />
+    </Suspense>
+  )
+}

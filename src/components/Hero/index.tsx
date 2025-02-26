@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import Image from "next/image";
@@ -42,7 +43,7 @@ const Hero = () => {
       }, 5000);
     }
     return () => clearInterval(timer);
-  }, [isAutoplay]);
+  }, [isAutoplay, slides.length]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));

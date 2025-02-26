@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import Link from "next/link";
@@ -7,25 +9,23 @@ const ProgramsPage = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div className="relative bg-[#2D2D2D] py-16">
-        <div className="container px-4 mx-auto">
-          <p className="text-white/70 italic">Polytechnique Montréal</p>
-          <h1 className="text-4xl font-bold text-white">
-            Programmes d'études
-          </h1>
+        <div className="container mx-auto px-4">
+          <p className="italic text-white/70">Polytechnique Montréal</p>
+          <h1 className="text-4xl font-bold text-white">Programmes d'études</h1>
         </div>
         {/* Logo en filigrane */}
-        <div className="absolute top-0 right-0 w-1/2 h-full opacity-10">
+        <div className="absolute right-0 top-0 h-full w-1/2 opacity-10">
           <img
             src="/images/poly-logo.png"
             alt="Logo Polytechnique"
-            className="object-contain w-full h-full"
+            className="h-full w-full object-contain"
           />
         </div>
       </div>
 
       {/* Fil d'Ariane */}
       <div className="bg-gray-100 py-2">
-        <div className="container px-4 mx-auto">
+        <div className="container mx-auto px-4">
           <div className="flex items-center text-sm">
             <Link href="/" className="text-gray-600 hover:text-primary">
               Accueil
@@ -36,45 +36,41 @@ const ProgramsPage = () => {
         </div>
       </div>
 
-      <div className="container px-4 py-8 mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {/* Sections de programmes */}
           <div className="lg:col-span-2">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               {/* Certificats et microprogrammes */}
-              <div className="bg-white p-6 rounded-lg shadow-sm border">
-                <h2 className="text-xl font-bold mb-4">
+              <div className="rounded-lg border bg-white p-6 shadow-sm">
+                <h2 className="mb-4 text-xl font-bold">
                   Certificats et microprogrammes de 1er cycle
                 </h2>
-                <Link 
+                <Link
                   href="/programme/certificats"
-                  className="inline-block px-8 py-2 bg-[#FF8C42] text-white rounded hover:bg-[#FF8C42]/90 transition-colors"
+                  className="inline-block rounded bg-[#FF8C42] px-8 py-2 text-white transition-colors hover:bg-[#FF8C42]/90"
                 >
                   VOIR
                 </Link>
               </div>
 
               {/* Baccalauréat */}
-              <div className="bg-white p-6 rounded-lg shadow-sm border">
-                <h2 className="text-xl font-bold mb-4">
-                  Baccalauréat
-                </h2>
-                <Link 
+              <div className="rounded-lg border bg-white p-6 shadow-sm">
+                <h2 className="mb-4 text-xl font-bold">Baccalauréat</h2>
+                <Link
                   href="/programme/baccalaureat"
-                  className="inline-block px-8 py-2 bg-[#FF8C42] text-white rounded hover:bg-[#FF8C42]/90 transition-colors"
+                  className="inline-block rounded bg-[#FF8C42] px-8 py-2 text-white transition-colors hover:bg-[#FF8C42]/90"
                 >
                   VOIR
                 </Link>
               </div>
 
               {/* Études supérieures */}
-              <div className="bg-white p-6 rounded-lg shadow-sm border">
-                <h2 className="text-xl font-bold mb-4">
-                  Études supérieures
-                </h2>
-                <Link 
+              <div className="rounded-lg border bg-white p-6 shadow-sm">
+                <h2 className="mb-4 text-xl font-bold">Études supérieures</h2>
+                <Link
                   href="/programme/etudes-superieures"
-                  className="inline-block px-8 py-2 bg-[#FF8C42] text-white rounded hover:bg-[#FF8C42]/90 transition-colors"
+                  className="inline-block rounded bg-[#FF8C42] px-8 py-2 text-white transition-colors hover:bg-[#FF8C42]/90"
                 >
                   VOIR
                 </Link>
@@ -84,55 +80,55 @@ const ProgramsPage = () => {
 
           {/* Formulaire de recherche */}
           <div className="lg:col-span-1">
-            <div className="bg-white p-6 rounded-lg shadow-sm border">
-              <h3 className="text-lg font-bold mb-6">LISTE DES COURS</h3>
-              
+            <div className="rounded-lg border bg-white p-6 shadow-sm">
+              <h3 className="mb-6 text-lg font-bold">LISTE DES COURS</h3>
+
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="mb-1 block text-sm font-medium text-gray-700">
                     SIGLE
                   </label>
                   <input
                     type="text"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                    className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-transparent focus:ring-2 focus:ring-primary"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="mb-1 block text-sm font-medium text-gray-700">
                     TITRE
                   </label>
                   <input
                     type="text"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                    className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-transparent focus:ring-2 focus:ring-primary"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="mb-1 block text-sm font-medium text-gray-700">
                     ENSEIGNANTS
                   </label>
                   <input
                     type="text"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                    className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-transparent focus:ring-2 focus:ring-primary"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="mb-1 block text-sm font-medium text-gray-700">
                     DESCRIPTION
                   </label>
                   <input
                     type="text"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                    className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-transparent focus:ring-2 focus:ring-primary"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="mb-1 block text-sm font-medium text-gray-700">
                     Période
                   </label>
-                  <select className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent">
+                  <select className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-transparent focus:ring-2 focus:ring-primary">
                     <option value="">Sélectionner une période</option>
                     <option value="A23">Automne 2023</option>
                     <option value="H24">Hiver 2024</option>
@@ -140,7 +136,7 @@ const ProgramsPage = () => {
                   </select>
                 </div>
 
-                <button className="w-full px-4 py-2 bg-[#FF8C42] text-white rounded hover:bg-[#FF8C42]/90 transition-colors">
+                <button className="w-full rounded bg-[#FF8C42] px-4 py-2 text-white transition-colors hover:bg-[#FF8C42]/90">
                   RECHERCHER
                 </button>
               </div>

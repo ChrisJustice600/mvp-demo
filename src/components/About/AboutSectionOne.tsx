@@ -1,9 +1,10 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 const Avantage = () => {
   return (
-    <section className="py-16 bg-white">
-      <div className="container px-4 mx-auto">
-        <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
+    <section className="bg-white py-16">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           {/* Texte à gauche */}
           <div className="lg:col-span-1">
             <h2 className="mb-6 text-4xl font-bold leading-tight">
@@ -33,7 +34,7 @@ const Avantage = () => {
               <img
                 src="/images/drone.png" // Assurez-vous d'avoir l'image du drone dans votre dossier public
                 alt="Drone Polytechnique"
-                className="absolute top-0 right-0 object-contain w-full h-full animate-float" // Animation de flottement
+                className="animate-float absolute right-0 top-0 h-full w-full object-contain" // Animation de flottement
               />
             </div>
           </div>
