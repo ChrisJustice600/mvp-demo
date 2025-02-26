@@ -1,7 +1,3 @@
 export default function ZoneEtudiant() {
-  return (
-    <div>
-      {/* Votre contenu ici */}
-    </div>
-  )
+  return <div>{/* Votre contenu ici */}text</div>;
 }
